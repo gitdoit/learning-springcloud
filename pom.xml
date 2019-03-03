@@ -16,6 +16,7 @@
         <relativePath/>
     </parent>
 
+    <!--子模块-->
     <modules>
         <module>microservice-server</module>
         <module>microservice-api</module>
