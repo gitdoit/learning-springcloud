@@ -22,6 +22,7 @@
         <module>microservice-api</module>
         <module>microservice-provide</module>
         <module>microservice-consumer</module>
+        <module>doc</module>
     </modules>
 
     <properties>
