@@ -6,11 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="microservice-api" />
-        <module name="microservice-consumer" />
         <module name="microservice-provide" />
+        <module name="microservice-consumer" />
+        <module name="microservice-api" />
         <module name="microservice-server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="doc" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="doc" options="-parameters" />
+      <module name="microservice-api" options="" />
+      <module name="microservice-consumer" options="" />
+      <module name="microservice-provide" options="" />
+      <module name="microservice-server" options="" />
+    </option>
   </component>
 </project>

@@ -1,0 +1,21 @@
+server:
+  port: 8001
+mybatis:
+  #config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: org.seefly.microserviceapi.entites
+  mapper-locations:
+    - classpath:mybatis/mapper/**/*.xml
+spring:
+  application:
+    name: microservicecloud-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://119.23.252.178:3306/cloudDB01?&useUnicode=true&characterEncoding=utf8&autoReconnect=true&tinyInt1isBit=false&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: shang2010
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
