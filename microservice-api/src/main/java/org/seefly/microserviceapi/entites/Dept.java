@@ -16,11 +16,17 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Accessors(chain = true)
 public class Dept implements Serializable {
-    /**主键*/
+    /**
+     * 主键
+     */
     private Long deptno;
-    /**部门名称*/
+    /**
+     * 部门名称
+     */
     private String dname;
-    /**来自哪个数据库*/
+    /**
+     * 来自哪个数据库
+     */
     private String dbSource;
 
     public Dept(String dname) {

@@ -1,7 +1,7 @@
-package org.seefly.microserviceprovide.controller;
+package org.seefly.microserviceprovide2.controller;
 
 import org.seefly.microserviceapi.entites.Dept;
-import org.seefly.microserviceprovide.service.DeptService;
+import org.seefly.microserviceprovide2.service.DeptService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

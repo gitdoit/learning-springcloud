@@ -1,6 +1,5 @@
-package org.seefly.microserviceprovide.dao;
+package org.seefly.microserviceprovide2.dao;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.seefly.microserviceapi.entites.Dept;
 
 import java.util.List;
