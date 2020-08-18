@@ -1,5 +1,0 @@
-server:
-  port: 8080
-spring:
-  application:
-    name: example #DataId=${prefix}-${spring.profile.active}.${file-extension}

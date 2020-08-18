@@ -1,17 +1,17 @@
-package org.seefly.microserviceprovide;
+package org.seefly.microserviceprovide2;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-@MapperScan("org.seefly.microserviceprovide.dao")
 @SpringBootApplication
 @EnableEurekaClient
-public class MicroserviceProvideApplication {
+@MapperScan("org.seefly.microserviceprovide2.dao")
+public class MicroserviceProvide2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(MicroserviceProvideApplication.class, args);
+        SpringApplication.run(MicroserviceProvide2Application.class, args);
     }
 
 }
