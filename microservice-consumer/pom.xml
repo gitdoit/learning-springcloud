@@ -14,6 +14,12 @@
     <dependencies>
         <dependency>
             <groupId>org.seefly</groupId>
+            <artifactId>provider-api-dept</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seefly</groupId>
             <artifactId>microservice-api</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -24,21 +30,15 @@
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
 <!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-config</artifactId>-->
+<!--            <groupId>com.alibaba.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
 <!--        </dependency>-->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.nacos</groupId>
-            <artifactId>nacos-client</artifactId>
-            <version>1.3.2</version>
-            <scope>compile</scope>
-        </dependency>
-
-
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.nacos</groupId>-->
+<!--            <artifactId>nacos-client</artifactId>-->
+<!--            <version>1.3.2</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
 
 
         <dependency>
