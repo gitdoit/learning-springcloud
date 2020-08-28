@@ -16,6 +16,19 @@
         <module>microservice-server2</module>
         <module>microservice-server3</module>
     </modules>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <outputDirectory>${project.basedir/lib}</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>

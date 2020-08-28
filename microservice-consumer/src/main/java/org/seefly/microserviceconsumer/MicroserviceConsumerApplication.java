@@ -7,6 +7,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableEurekaClient
+// 扫秒指定包下的Feign客户端
 @EnableFeignClients(basePackages = "org.seefly.microservice.provider.api.service")
 public class MicroserviceConsumerApplication {
 

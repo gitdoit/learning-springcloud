@@ -12,12 +12,12 @@ import java.util.List;
  * @date 2019/9/21 11:07
  */
 @RestController
-public class DeptControllerConsumer {
+public class DeptControllerByRest {
 
     private final RestTemplate restTemplate;
     private final String url = "http://MICROSERVICECLOUD-DEPT";
 
-    public DeptControllerConsumer(RestTemplate restTemplate) {
+    public DeptControllerByRest(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 

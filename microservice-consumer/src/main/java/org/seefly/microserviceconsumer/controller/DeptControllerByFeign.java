@@ -18,7 +18,6 @@ public class DeptControllerByFeign {
     public DeptControllerByFeign(DeptFeignApi deptFeignApi) {
         this.deptFeignApi = deptFeignApi;
     }
-
     @GetMapping("feign/all")
     public List<Dept> getAll(){
         return deptFeignApi.list();
@@ -33,7 +32,5 @@ public class DeptControllerByFeign {
     public Dept get(@PathVariable("id") Long id) {
         return deptFeignApi.get(id);
     }
-
-
 
 }
