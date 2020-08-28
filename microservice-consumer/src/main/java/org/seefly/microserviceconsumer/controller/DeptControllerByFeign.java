@@ -1,7 +1,9 @@
 package org.seefly.microserviceconsumer.controller;
 
 import org.seefly.microservice.provider.api.service.DeptFeignApi;
+import org.seefly.microservice.provider.api.service.fallback.DeptFeignApiFallBack;
 import org.seefly.microserviceapi.entites.Dept;
+import org.springframework.context.annotation.Import;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,6 +13,7 @@ import java.util.List;
  * @author liujianxin
  * @date 2020/8/18 15:48
  */
+@Import(DeptFeignApiFallBack.class)
 @RestController
 public class DeptControllerByFeign {
     private final DeptFeignApi deptFeignApi;
