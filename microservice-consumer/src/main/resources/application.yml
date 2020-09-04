@@ -2,10 +2,19 @@ server:
   port: 80
 eureka:
   client:
-    register-with-eureka: false
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 30 # 多少秒拉取一次注册信息
     service-url:
       #defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002:7002/eureka,http://eureka7003.com:7003/eureka/
       defaultZone: http://192.168.10.64:7001/eureka
+    heartbeat-executor-exponential-back-off-bound: 10 #心跳超时重试延迟时间的最大乘数值
+  instance:
+    lease-renewal-interval-in-seconds: 30 #多少秒一次续约，默认30.最好别动
+    lease-expiration-duration-in-seconds: 90 #续约过期时间，默认90
 feign:
   hystrix:
     enabled: true
+spring:
+  application:
+    name: micro-consumer

@@ -1,12 +1,20 @@
 package org.seefly.microserviceconsumer.controller;
 
+import com.netflix.discovery.DiscoveryClient;
+import com.netflix.discovery.TimedSupervisorTask;
 import org.seefly.microservice.provider.api.service.DeptFeignApi;
 import org.seefly.microservice.provider.api.service.fallback.DeptFeignApiFallBack;
 import org.seefly.microserviceapi.entites.Dept;
+import org.springframework.cloud.client.discovery.event.InstanceRegisteredEvent;
 import org.springframework.context.annotation.Import;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 使用Feign的方式调用微服务
@@ -35,5 +43,8 @@ public class DeptControllerByFeign {
     public Dept get(@PathVariable("id") Long id) {
         return deptFeignApi.get(id);
     }
+    
+
+
 
 }

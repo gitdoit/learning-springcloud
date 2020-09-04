@@ -2,7 +2,7 @@ server:
   port: 7001
 eureka:
   instance:
-    hostname: 192.168.10.64 #eureka服务端的实例名称
+    hostname: 192.168.10.62 #eureka服务端的实例名称
   client:
     register-with-eureka: false #自己不注册到eureka，因为自己是个eurekaServer
     fetch-registry: false #不从注册中心检索服务实例，因为不需要
