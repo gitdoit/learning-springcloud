@@ -12,6 +12,8 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 30 #多少秒一次续约，默认30.最好别动
     lease-expiration-duration-in-seconds: 90 #续约过期时间，默认90
+    initial-status: up #首次注册到注册中心时的状态，默认up
+    instance-enabled-onit: false #在初始化实例的时候将实例状态置为 UP 吗？ 默认false
 feign:
   hystrix:
     enabled: true

@@ -7,7 +7,9 @@ eureka:
     register-with-eureka: false #自己不注册到eureka，因为自己是个eurekaServer
     fetch-registry: false #不从注册中心检索服务实例，因为不需要
     service-url:
-      # 和EurekaServer的交互地址查询服务和注册服务，都需要依赖这个地址
-      # 多个eurekaServer之间要相互同步节点信息
       #defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    renewal-percent-threshold: 0.85 # 自我保护中，计算最少需要收到心跳数的百分比阈值
+    enable-self-preservation: true #开启自我保护
+    renewal-threshold-update-interval-ms: 900000 # 更新触发自我保护阈值参数的时间间隔，默认15分钟

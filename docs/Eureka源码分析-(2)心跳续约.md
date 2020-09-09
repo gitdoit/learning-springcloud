@@ -19,15 +19,21 @@
 ### 3. 执行心跳
 
 >  心跳续约的方法很简单，就是发起请求，根据响应结果决定是不是需要注册。
+>
+>  心跳上报的数据也很简单，可以在服务端的接收接口看到，只包含下面几个参数
+>
+>  - 服务状态-`status`
+>  - 版本号-`lastDirtyTimestamp`
+>  - 覆盖状态-`overriddenstatus`
 
 ```java
 boolean renew() {
     EurekaHttpResponse<InstanceInfo> httpResponse;
     try {
         httpResponse = eurekaTransport.registrationClient.sendHeartBeat(instanceInfo.getAppName(), instanceInfo.getId(), instanceInfo, null);
+      // 响应404，表名注册中心想要你先去注册，可能是版本号冲突或者是你根本还没注册
         if (httpResponse.getStatusCode() == 404) {
             REREGISTER_COUNTER.increment();
-            // 这就比较有意思了，404说明你服务还没注册，去注册去吧
             return register();
         }
         // 成功
@@ -40,3 +46,34 @@ boolean renew() {
 
 ## 二、注册中心处理心跳
 
+### 一、注册中心接收续租请求
+
+> 心跳处理接口在注册中心的 `com.netflix.eureka.resources.InstanceResource#renewLease`
+>
+> 源码如下
+
+<img src="http://qiniu.seefly.top/carbon%20(14).png" alt="carbon (14)" style="zoom:80%;" />
+
+
+
+### 二、校验版本号
+
+> `validateDirtyTimestamp(Long lastDirtyTimestamp, boolean isReplication)`我把它理解为校验版本号，既然是心跳续约，会有信息同步。网络环境不可靠的情况下，使用版本号(`lastDirtyTimestamp`)来控制数据一致性，就可以解决这个问题。
+
+<img src="http://qiniu.seefly.top/carbon%20(15).png" alt="carbon (15)" style="zoom:80%;" />
+
+### 三、更新续约
+
+> 这里的逻辑也比较简单
+>
+> - 获取本地租约信息，没有返回false，从而导致响应404
+>
+> - 进行一些覆盖状态的校验，后面会说
+>
+> - 续约，就是更新`lastUpdateTimestamp`=当前时间+续约间隔
+>
+>   其实是不应该加续约间隔（`duration`）这个参数的，官方是说是个小问题
+>
+>   也没有修，修了会影响其他地方。
+
+<img src="http://qiniu.seefly.top/carbon%20(16).png" alt="carbon (16)"  />
