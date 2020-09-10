@@ -114,3 +114,9 @@
 >即使关闭了自我保护模式，`eureka server`也不会在一个周期内将过期的实例全部剔除。可能是为了保证可用性？
 
 ![carbon (21)](http://qiniu.seefly.top/carbon%20(21).png)
+
+#### 4、移除实例信息
+
+> 在主动注销里面可以看到，最后调用的是同一个方法
+>
+> `AbstractInstanceRegistry#internalCancel`就不再赘述了

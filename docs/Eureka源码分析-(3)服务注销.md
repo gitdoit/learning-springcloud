@@ -67,7 +67,7 @@ public boolean cancel(final String appName, final String id,
 
 ### 2、`AbstractInstanceRegistry#internalCancel`
 
-> 从注册表中移除，纪录变更等
+> 从注册表中移除，纪录变更、缓存失效等
 
 ![carbon (18)](http://qiniu.seefly.top/carbon%20(18).png)
 
