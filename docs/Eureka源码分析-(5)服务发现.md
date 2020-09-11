@@ -65,7 +65,13 @@ DiscoveryClient(ApplicationInfoManager applicationInfoManager,
 
 ![carbon (26)](http://qiniu.seefly.top/carbon%20(26).png)
 
-这里面的`generatePayload(key)`没什么好看的，如果是全量获取就直接读`registry.getApplications()`
+##### iii、判断请求类型-读取注册表
+
+> 主要是根据请求类型，来判断是全量读取还是增量读取，是本地读取还是远程集群读取。
+
+![carbon (33)](http://qiniu.seefly.top/carbon%20(33).png)
+
+
 
 #### 3）**缓存过期策略**
 

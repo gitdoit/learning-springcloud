@@ -19,3 +19,5 @@ eureka:
     use-read-only-response-cache: true # 是否启用只读缓存，生产生产环境建议开启。开发环境关掉，只使用读写缓存，能够快速感知服务下线
     response-cache-update-interval-ms: 30000 # 读写缓存和只读缓存的同步周期，越小就能越快感知服务下线
     eviction-interval-timer-in-ms: 60000 # 多久扫秒一次超时未心跳的实例进行剔除
+    retention-time-in-m-s-in-delta-queue: 180000 # 最近变更队列中元素的生存时间
+    delta-retention-timer-interval-in-ms: 30000 # 多久清理一次最近变更队列
