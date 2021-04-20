@@ -7,6 +7,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
+/**
+ * test for github ssh
+ */
 @SpringBootApplication
 @EnableEurekaClient
 // 扫秒指定包下的Feign客户端
