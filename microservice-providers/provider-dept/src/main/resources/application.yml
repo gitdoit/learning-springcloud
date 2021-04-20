@@ -1,0 +1,25 @@
+server:
+  port: ${port}
+mybatis:
+  #config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: org.seefly.microserviceapi.entites
+  mapper-locations:
+    - classpath:mybatis/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+spring:
+  application:
+    name: microservicecloud-dept
+eureka:
+  client:
+    service-url:
+      defaultZone: http://121.36.142.5:7001/eureka # eurekaServer地址，单机版
+  instance:
+    instance-id: ${providerid} #实例ID
+    prefer-ip-address: true #访问路径可以显示IP地址
+    ip-address: ${exportip}
+info:
+  app.name: seefly-microservicecloud
+  company.name: www.seefly.top
+  build.artifactId: @project.artifactId@ #maven对这resources文件夹进行扫描，替换 $...$之间的变量
+  build.version: @project.version@ #需要配置resource插件

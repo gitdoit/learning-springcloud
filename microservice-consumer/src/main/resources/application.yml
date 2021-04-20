@@ -1,3 +1,6 @@
+spring:
+  application:
+    name: micro-consumer
 server:
   port: 80
 eureka:
@@ -6,8 +9,7 @@ eureka:
     register-with-eureka: true
     registry-fetch-interval-seconds: 30 # 多少秒拉取一次注册信息
     service-url:
-      #defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002:7002/eureka,http://eureka7003.com:7003/eureka/
-      defaultZone: http://192.168.10.62:7001/eureka
+      defaultZone: http://121.36.142.5:7001/eureka
     heartbeat-executor-exponential-back-off-bound: 10 #心跳超时重试延迟时间的最大乘数值
     # fetch-remote-regions-registry: 从其他区域拉取注册信息
   instance:
@@ -15,9 +17,58 @@ eureka:
     lease-expiration-duration-in-seconds: 90 #续约过期时间，默认90
     initial-status: up #首次注册到注册中心时的状态，默认up
     instance-enabled-onit: false #在初始化实例的时候将实例状态置为 UP 吗？ 默认false
+
+# see FeignClientConfiguration
 feign:
   hystrix:
+    enabled: true #调用方开启熔断策略，此时超时(默认1s)、调用返回异常、线程池耗尽都会触发降级
+  client:
+    default-config: defalut #启用的配置方案
+    config: # 配置方案集合
+      defalut:
+        #connectTimeout: 3000 #连接时间，如果开启了hystrix，就不要配这个。不然会出现就算小于3秒，返回成功，但是断路器是1秒，也会执行fallback
+        #readTimeout: 3000 # 读取超时
+        loggerLevel: FULL
+        decode404: true # 不要把4xx当成调用失败
+
+# see HystrixCommandProperties
+# see https://www.cnblogs.com/throwable/p/11961016.html
+hystrix:
+  command:
+    #SleepFeignApi#sleep(Long) 指定配置
+    #  execution:
+    default:  #default全局有效
+      fallback:
+        enabled: false #是否启用fallback,feign.hystrix.enabled开了，这个不开也不行
+      circuitBreaker:
+        enabled: true #是否启用断路器
+        requestVolumeThreshold: 20 #请求数量，10秒内19个请求，就算全错了 也不会触发断路器
+        sleepWindowInMilliseconds: 5 #熔断休眠时间，熔断触发5秒后，进行半开尝试
+        errorThresholdPercentage: 50 # 错误百分比
+      execution:
+        timeout:
+          enabled: true #如果enabled设置为false，则请求超时交给ribbon控制,为true,则超时作为熔断根据
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000 #断路器超时时间，默认1000ms
+  threadpool:
+    default: #hystrix使用的线程池配置
+      coreSize: 10 #核心线程数
+      maximumSize: 10 #最大线程数
+      maxQueueSize: -1 #同步队列容量，-1就是用SynchronousQueue，大于0 就用LinkedBlockingQueue
+      # 队列最大容量，maxQueueSize=-1时不生效，这个真容易混淆，容量上限本来可以用阻塞队列大小控制，还要多加一个这个
+      # 如果maxQueueSize >= queueSizeRejectionThreshold,那就会发生阻塞队列还没满 就给拒绝了，maxQueueSize也会失效
+      # 如果maxQueueSize < queueSizeRejectionThreshold,那这个值毛用没有，真是醉醉的
+      queueSizeRejectionThreshold: 10
+
+
+ribbon:
+  eager-load: #提前加载指定服务的实例信息,而不是第一次调用的时候再跑到注册中心拉一下
     enabled: true
-spring:
-  application:
-    name: micro-consumer
+    clients: MICROSERVICECLOUD-DEPT
+  ReadTimeout: 5000 #接口调用超时限制
+  ConnectTimeout: 2000
+logging:
+  level:
+    org.seefly.microservice.provider.api.service.SleepFeignApi: debug
+

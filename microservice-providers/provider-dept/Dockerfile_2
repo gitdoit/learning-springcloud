@@ -1,0 +1,6 @@
+FROM openjdk:8-jdk-alpine
+MAINTAINER by liujianxin
+VOLUME ["/tmp"]
+ARG JAR_FILE
+COPY ${JAR_FILE} provider2.jar
+ENTRYPOINT [ "sh", "-c", "java -Xms256m -Xmx256m -XX:+UseSerialGC -Dexportip=192.168.10.64 -Dport=8001 -Ddatasource=datasource2.yaml -Dproviderid=provider2 -Djava.security.egd=file:/dev/./urandom -jar /provider2.jar" ]

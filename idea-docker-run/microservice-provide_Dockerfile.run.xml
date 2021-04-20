@@ -30,10 +30,10 @@
     </deployment>
     <method v="2" />
   </configuration>
-  <configuration default="false" name="microservice-provide/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+  <configuration default="false" name="hw-provider-1" type="docker-deploy" factoryName="dockerfile" server-name="华为云">
     <deployment type="dockerfile">
       <settings>
-        <option name="imageTag" value="seefly.top/micro/provider1:1.0" />
+        <option name="imageTag" value="seefly.top/micro/provider-1:1.0" />
         <option name="buildArgs">
           <list>
             <DockerEnvVarImpl>
@@ -45,7 +45,7 @@
         <option name="buildCliOptions" value="" />
         <option name="command" value="" />
         <option name="containerName" value="provider-1" />
-        <option name="contextFolderPath" value="microservice-providers/microservice-provide/lib" />
+        <option name="contextFolderPath" value="microservice-providers/provider-dept/lib" />
         <option name="entrypoint" value="" />
         <option name="portBindings">
           <list>
@@ -55,8 +55,8 @@
             </DockerPortBindingImpl>
           </list>
         </option>
-        <option name="commandLineOptions" value="--net host" />
-        <option name="sourceFilePath" value="microservice-providers/microservice-provide/Dockerfile" />
+        <option name="commandLineOptions" value="" />
+        <option name="sourceFilePath" value="microservice-providers/provider-dept/Dockerfile_1" />
       </settings>
     </deployment>
     <method v="2" />

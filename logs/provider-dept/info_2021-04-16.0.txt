@@ -1,0 +1,225 @@
+14:43:39.859 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+14:43:41.769 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\seefl\nacos\config
+14:43:41.815 [restartedMain] INFO  com.alibaba.nacos.client.config.utils.JvmUtil - isMultiInstance:false
+14:43:41.840 [restartedMain] WARN  com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[microservicecloud-dept] & group[DEFAULT_GROUP]
+14:43:41.858 [restartedMain] WARN  com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[microservicecloud-dept.yaml] & group[DEFAULT_GROUP]
+14:43:41.863 [restartedMain] INFO  org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-microservicecloud-dept.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-microservicecloud-dept,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-datasource.yaml,DEFAULT_GROUP'}]
+14:43:41.868 [restartedMain] INFO  org.seefly.microserviceprovide.MicroserviceProvideApplication - No active profile set, falling back to default profiles: default
+14:43:43.367 [restartedMain] WARN  org.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+14:43:43.867 [restartedMain] WARN  org.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+14:43:43.889 [restartedMain] WARN  org.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+14:43:44.065 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=7c2cd349-56ee-3733-ae4d-dfb96ff20edb
+14:43:44.293 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:43:45.059 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+14:43:45.071 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+14:43:45.072 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+14:43:45.072 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+14:43:45.205 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:43:45.207 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3294 ms
+14:43:45.403 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+14:43:45.403 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:43:45.412 [restartedMain] INFO  com.netflix.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@541f01bf
+14:43:47.535 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+14:43:47.535 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:43:47.786 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:43:48.326 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+14:43:49.546 [restartedMain] WARN  org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+14:43:49.608 [restartedMain] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+14:43:49.780 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+14:43:49.816 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+14:43:50.672 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+14:43:50.672 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+14:43:50.805 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+14:43:50.805 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+14:43:51.041 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:43:51.761 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+14:43:51.761 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+14:43:51.761 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+14:43:51.761 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+14:43:51.761 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+14:43:51.761 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+14:43:51.761 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+14:43:51.964 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+14:43:51.967 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+14:43:51.970 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+14:43:51.975 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1618555431973 with initial instances count: 2
+14:43:51.981 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Registering application MICROSERVICECLOUD-DEPT with eureka with status UP
+14:43:51.982 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1618555431982, current=UP, previous=STARTING]
+14:43:51.986 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider: registering service...
+14:43:52.013 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+14:43:52.042 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider - registration status: 204
+14:43:52.051 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+14:43:52.053 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration - Updating port to 8001
+14:43:53.107 [restartedMain] INFO  org.seefly.microserviceprovide.MicroserviceProvideApplication - Started MicroserviceProvideApplication in 15.405 seconds (JVM running for 17.927)
+14:43:53.116 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [subscribe] datasource.yaml+DEFAULT_GROUP+58323ede-55c8-40e1-92f9-a2527ea7dbba
+14:43:53.119 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [add-listener] ok, tenant=58323ede-55c8-40e1-92f9-a2527ea7dbba, dataId=datasource.yaml, group=DEFAULT_GROUP, cnt=1
+14:43:53.119 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [subscribe] microservicecloud-dept.yaml+DEFAULT_GROUP+58323ede-55c8-40e1-92f9-a2527ea7dbba
+14:43:53.120 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [add-listener] ok, tenant=58323ede-55c8-40e1-92f9-a2527ea7dbba, dataId=microservicecloud-dept.yaml, group=DEFAULT_GROUP, cnt=1
+14:43:53.120 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [subscribe] microservicecloud-dept+DEFAULT_GROUP+58323ede-55c8-40e1-92f9-a2527ea7dbba
+14:43:53.120 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [add-listener] ok, tenant=58323ede-55c8-40e1-92f9-a2527ea7dbba, dataId=microservicecloud-dept, group=DEFAULT_GROUP, cnt=1
+14:43:54.145 [RMI TCP Connection(6)-192.168.10.62] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:43:54.145 [RMI TCP Connection(6)-192.168.10.62] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:43:54.180 [RMI TCP Connection(6)-192.168.10.62] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 35 ms
+14:43:54.270 [RMI TCP Connection(5)-192.168.10.62] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+14:44:30.928 [hystrix-HystrixServiceImpl-1] INFO  org.seefly.microserviceprovide.service.impl.HystrixServiceImpl - [sleepTimeout][hystrix-HystrixServiceImpl-1]将休眠100ns
+14:44:30.943 [hystrix-HystrixServiceImpl-1] INFO  org.seefly.microserviceprovide.service.impl.HystrixServiceImpl - 起来了,中断位false
+14:46:06.250 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application MICROSERVICECLOUD-DEPT with eureka with status DOWN
+14:46:06.250 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1618555566250, current=DOWN, previous=UP]
+14:46:06.250 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider: registering service...
+14:46:06.258 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+14:46:06.269 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider - registration status: 204
+14:46:06.273 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+14:46:06.275 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+14:46:09.291 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Unregistering ...
+14:46:09.321 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider - deregister  status: 200
+14:46:09.332 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+14:46:18.381 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+14:46:20.059 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\seefl\nacos\config
+14:46:20.102 [restartedMain] INFO  com.alibaba.nacos.client.config.utils.JvmUtil - isMultiInstance:false
+14:46:20.126 [restartedMain] WARN  com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[microservicecloud-dept] & group[DEFAULT_GROUP]
+14:46:20.144 [restartedMain] WARN  com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[microservicecloud-dept.yaml] & group[DEFAULT_GROUP]
+14:46:20.145 [restartedMain] INFO  org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-microservicecloud-dept.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-microservicecloud-dept,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-datasource.yaml,DEFAULT_GROUP'}]
+14:46:20.151 [restartedMain] INFO  org.seefly.microserviceprovide.MicroserviceProvideApplication - No active profile set, falling back to default profiles: default
+14:46:21.007 [restartedMain] WARN  org.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+14:46:21.455 [restartedMain] WARN  org.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+14:46:21.478 [restartedMain] WARN  org.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+14:46:21.645 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=7c2cd349-56ee-3733-ae4d-dfb96ff20edb
+14:46:21.919 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:46:22.694 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+14:46:22.707 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+14:46:22.708 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+14:46:22.708 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+14:46:22.843 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:46:22.844 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2669 ms
+14:46:22.971 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+14:46:22.971 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:46:22.981 [restartedMain] INFO  com.netflix.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@455154e5
+14:46:24.913 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+14:46:24.913 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:46:25.141 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:46:25.614 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+14:46:26.719 [restartedMain] WARN  org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+14:46:26.778 [restartedMain] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+14:46:26.922 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+14:46:26.964 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+14:46:27.830 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+14:46:27.830 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+14:46:27.963 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+14:46:27.964 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+14:46:28.203 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:46:28.906 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+14:46:28.906 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+14:46:28.906 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+14:46:28.906 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+14:46:28.907 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+14:46:28.907 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+14:46:28.907 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+14:46:29.115 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+14:46:29.119 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+14:46:29.121 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+14:46:29.125 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1618555589124 with initial instances count: 3
+14:46:29.129 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Registering application MICROSERVICECLOUD-DEPT with eureka with status UP
+14:46:29.129 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1618555589129, current=UP, previous=STARTING]
+14:46:29.132 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider: registering service...
+14:46:29.151 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+14:46:29.183 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider - registration status: 204
+14:46:29.186 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+14:46:29.187 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration - Updating port to 8001
+14:46:30.225 [restartedMain] INFO  org.seefly.microserviceprovide.MicroserviceProvideApplication - Started MicroserviceProvideApplication in 13.85 seconds (JVM running for 16.062)
+14:46:30.235 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [subscribe] datasource.yaml+DEFAULT_GROUP+58323ede-55c8-40e1-92f9-a2527ea7dbba
+14:46:30.237 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [add-listener] ok, tenant=58323ede-55c8-40e1-92f9-a2527ea7dbba, dataId=datasource.yaml, group=DEFAULT_GROUP, cnt=1
+14:46:30.237 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [subscribe] microservicecloud-dept.yaml+DEFAULT_GROUP+58323ede-55c8-40e1-92f9-a2527ea7dbba
+14:46:30.237 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [add-listener] ok, tenant=58323ede-55c8-40e1-92f9-a2527ea7dbba, dataId=microservicecloud-dept.yaml, group=DEFAULT_GROUP, cnt=1
+14:46:30.238 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [subscribe] microservicecloud-dept+DEFAULT_GROUP+58323ede-55c8-40e1-92f9-a2527ea7dbba
+14:46:30.238 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [add-listener] ok, tenant=58323ede-55c8-40e1-92f9-a2527ea7dbba, dataId=microservicecloud-dept, group=DEFAULT_GROUP, cnt=1
+14:46:30.526 [RMI TCP Connection(1)-192.168.10.62] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:46:30.526 [RMI TCP Connection(1)-192.168.10.62] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:46:30.542 [RMI TCP Connection(1)-192.168.10.62] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+14:46:30.581 [RMI TCP Connection(2)-192.168.10.62] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+14:48:47.603 [hystrix-HystrixServiceImpl-1] INFO  org.seefly.microserviceprovide.service.impl.HystrixServiceImpl - [sleepTimeout][hystrix-HystrixServiceImpl-1]将休眠100ns
+14:48:47.618 [hystrix-HystrixServiceImpl-1] INFO  org.seefly.microserviceprovide.service.impl.HystrixServiceImpl - 起来了,中断位false
+14:51:28.911 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:53:03.805 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application MICROSERVICECLOUD-DEPT with eureka with status DOWN
+14:53:03.805 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1618555983805, current=DOWN, previous=UP]
+14:53:03.805 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider: registering service...
+14:53:03.812 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+14:53:03.832 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+14:53:03.834 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+14:53:03.845 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider - registration status: 204
+14:53:03.847 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Unregistering ...
+14:53:03.880 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider - deregister  status: 200
+14:53:03.890 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+14:53:13.119 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+14:53:14.805 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\seefl\nacos\config
+14:53:14.847 [restartedMain] INFO  com.alibaba.nacos.client.config.utils.JvmUtil - isMultiInstance:false
+14:53:14.871 [restartedMain] WARN  com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[microservicecloud-dept] & group[DEFAULT_GROUP]
+14:53:14.888 [restartedMain] WARN  com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[microservicecloud-dept.yaml] & group[DEFAULT_GROUP]
+14:53:14.889 [restartedMain] INFO  org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-microservicecloud-dept.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-microservicecloud-dept,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-datasource.yaml,DEFAULT_GROUP'}]
+14:53:14.895 [restartedMain] INFO  org.seefly.microserviceprovide.MicroserviceProvideApplication - No active profile set, falling back to default profiles: default
+14:53:15.688 [restartedMain] WARN  org.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format.
+14:53:16.088 [restartedMain] WARN  org.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+14:53:16.108 [restartedMain] WARN  org.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+14:53:16.236 [restartedMain] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=7c2cd349-56ee-3733-ae4d-dfb96ff20edb
+14:53:16.419 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:53:17.119 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+14:53:17.132 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+14:53:17.133 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+14:53:17.133 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+14:53:17.266 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:53:17.267 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2349 ms
+14:53:17.376 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+14:53:17.376 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:53:17.389 [restartedMain] INFO  com.netflix.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@404ca93d
+14:53:19.177 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+14:53:19.178 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:53:19.399 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:53:19.861 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+14:53:20.946 [restartedMain] WARN  org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+14:53:21.003 [restartedMain] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+14:53:21.154 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+14:53:21.199 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+14:53:22.065 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+14:53:22.065 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+14:53:22.195 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+14:53:22.195 [restartedMain] INFO  com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+14:53:22.433 [restartedMain] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:53:23.137 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+14:53:23.138 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+14:53:23.138 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+14:53:23.138 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+14:53:23.138 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+14:53:23.138 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+14:53:23.139 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+14:53:23.358 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+14:53:23.362 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+14:53:23.365 [restartedMain] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+14:53:23.369 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1618556003368 with initial instances count: 3
+14:53:23.374 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Registering application MICROSERVICECLOUD-DEPT with eureka with status UP
+14:53:23.374 [restartedMain] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1618556003374, current=UP, previous=STARTING]
+14:53:23.377 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider: registering service...
+14:53:23.397 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+14:53:23.426 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider - registration status: 204
+14:53:23.432 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+14:53:23.433 [restartedMain] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration - Updating port to 8001
+14:53:24.510 [restartedMain] INFO  org.seefly.microserviceprovide.MicroserviceProvideApplication - Started MicroserviceProvideApplication in 13.357 seconds (JVM running for 15.522)
+14:53:24.521 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [subscribe] datasource.yaml+DEFAULT_GROUP+58323ede-55c8-40e1-92f9-a2527ea7dbba
+14:53:24.523 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [add-listener] ok, tenant=58323ede-55c8-40e1-92f9-a2527ea7dbba, dataId=datasource.yaml, group=DEFAULT_GROUP, cnt=1
+14:53:24.524 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [subscribe] microservicecloud-dept.yaml+DEFAULT_GROUP+58323ede-55c8-40e1-92f9-a2527ea7dbba
+14:53:24.524 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [add-listener] ok, tenant=58323ede-55c8-40e1-92f9-a2527ea7dbba, dataId=microservicecloud-dept.yaml, group=DEFAULT_GROUP, cnt=1
+14:53:24.524 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [subscribe] microservicecloud-dept+DEFAULT_GROUP+58323ede-55c8-40e1-92f9-a2527ea7dbba
+14:53:24.524 [restartedMain] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-121.36.142.5_8848-58323ede-55c8-40e1-92f9-a2527ea7dbba] [add-listener] ok, tenant=58323ede-55c8-40e1-92f9-a2527ea7dbba, dataId=microservicecloud-dept, group=DEFAULT_GROUP, cnt=1
+14:53:24.720 [RMI TCP Connection(1)-192.168.10.62] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+14:53:26.534 [RMI TCP Connection(3)-192.168.10.62] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:53:26.534 [RMI TCP Connection(3)-192.168.10.62] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:53:26.549 [RMI TCP Connection(3)-192.168.10.62] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+14:58:23.148 [AsyncResolver-bootstrap-executor-0] INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:00:27.416 [SpringContextShutdownHook] INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application MICROSERVICECLOUD-DEPT with eureka with status DOWN
+15:00:27.416 [SpringContextShutdownHook] WARN  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1618556427416, current=DOWN, previous=UP]
+15:00:27.416 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider: registering service...
+15:00:27.424 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:00:27.435 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider - registration status: 204
+15:00:27.439 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+15:00:27.442 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+15:00:30.450 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Unregistering ...
+15:00:30.481 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_MICROSERVICECLOUD-DEPT/local-provider - deregister  status: 200
+15:00:30.493 [SpringContextShutdownHook] INFO  com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

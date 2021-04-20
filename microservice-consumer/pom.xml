@@ -25,16 +25,20 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <!--<artifactId>spring-cloud-netflix-eureka-client</artifactId>-->
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <!--熔断器-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <!--<artifactId>spring-cloud-netflix-hystrix</artifactId>-->
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
+            <!--<artifactId>spring-cloud-starter-ribbon</artifactId>-->
+            <!--<artifactId>spring-cloud-netflix-ribbon</artifactId>-->
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
         </dependency>
 
         <dependency>
@@ -42,10 +46,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>springloaded</artifactId>
-        </dependency>
+       
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

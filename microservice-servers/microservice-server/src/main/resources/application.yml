@@ -2,7 +2,7 @@ server:
   port: 7001
 eureka:
   instance:
-    hostname: 192.168.10.62 #eureka服务端的实例名称
+    hostname: 121.36.142.5 #eureka服务端的实例名称
     lease-renewal-interval-in-seconds: 30 # 多少秒续约一次
     lease-expiration-duration-in-seconds: 90 # 租约，意思就是一次续约保证90秒内不会被剔除。
   client:
@@ -10,10 +10,10 @@ eureka:
     fetch-registry: false #不从注册中心检索服务实例，因为不需要
     service-url:
       #defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/,http://192.168.10.64:7001/eureka
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
+    enable-self-preservation: false #自我保护,测试环境关掉,demo都是强制关闭,不会发送下线消息给注册中心,导致经常触发自我保护,实例不会过期
     renewal-percent-threshold: 0.85 # 自我保护中，计算最少需要收到心跳数的百分比阈值
-    enable-self-preservation: true #开启自我保护
     renewal-threshold-update-interval-ms: 900000 # 更新触发自我保护阈值参数的时间间隔，默认15分钟
     response-cache-auto-expiration-in-seconds: 180 #双层缓存中，读写缓存的失效时间
     use-read-only-response-cache: true # 是否启用只读缓存，生产生产环境建议开启。开发环境关掉，只使用读写缓存，能够快速感知服务下线

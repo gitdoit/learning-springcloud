@@ -6,10 +6,9 @@ import feign.Retryer;
 import feign.codec.Decoder;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
-import org.springframework.cloud.netflix.feign.support.ResponseEntityDecoder;
-import org.springframework.cloud.netflix.feign.support.SpringDecoder;
+import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
+import org.springframework.cloud.openfeign.support.ResponseEntityDecoder;
+import org.springframework.cloud.openfeign.support.SpringDecoder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -28,7 +27,7 @@ public class CustomFeignClientsConfiguration {
     private ObjectFactory<HttpMessageConverters> messageConverters;
     
     
-    @Bean
+    // @Bean
     public Retryer feignRetryer() {
         return new Retryer.Default(100, SECONDS.toMillis(1), 5);
     }
@@ -40,7 +39,7 @@ public class CustomFeignClientsConfiguration {
         });
     }
     
-    public static class MyDecoder extends SpringDecoder{
+    public static class MyDecoder extends SpringDecoder {
     
         public MyDecoder(ObjectFactory<HttpMessageConverters> messageConverters) {
             super(messageConverters);
@@ -48,9 +47,7 @@ public class CustomFeignClientsConfiguration {
     
         @Override
         public Object decode(Response response, Type type) throws IOException, FeignException {
-            Object decode = super.decode(response, type);
-            System.out.println("自定义解码器来一脚...");
-            return decode;
+            return super.decode(response, type);
         }
     }
     

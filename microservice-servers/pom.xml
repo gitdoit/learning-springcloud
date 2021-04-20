@@ -13,8 +13,6 @@
     <artifactId>microservice-servers</artifactId>
     <modules>
         <module>microservice-server</module>
-        <module>microservice-server2</module>
-        <module>microservice-server3</module>
     </modules>
     
     <build>
