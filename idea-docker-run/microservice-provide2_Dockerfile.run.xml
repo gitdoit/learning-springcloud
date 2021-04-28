@@ -1,35 +1,4 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="microservice-provide2/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
-    <deployment type="dockerfile">
-      <settings>
-        <option name="imageTag" value="top.seefly/micro-provider2:1.0" />
-        <option name="buildArgs">
-          <list>
-            <DockerEnvVarImpl>
-              <option name="name" value="JAR_FILE" />
-              <option name="value" value="micro-provide-2.jar" />
-            </DockerEnvVarImpl>
-          </list>
-        </option>
-        <option name="buildCliOptions" value="" />
-        <option name="command" value="" />
-        <option name="containerName" value="me-provider-2" />
-        <option name="contextFolderPath" value="microservice-provide2/lib" />
-        <option name="entrypoint" value="" />
-        <option name="portBindings">
-          <list>
-            <DockerPortBindingImpl>
-              <option name="containerPort" value="8002" />
-              <option name="hostPort" value="8002" />
-            </DockerPortBindingImpl>
-          </list>
-        </option>
-        <option name="commandLineOptions" value="--net host" />
-        <option name="sourceFilePath" value="microservice-provide2/Dockerfile" />
-      </settings>
-    </deployment>
-    <method v="2" />
-  </configuration>
   <configuration default="false" name="64-provider-2" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
     <deployment type="dockerfile">
       <settings>

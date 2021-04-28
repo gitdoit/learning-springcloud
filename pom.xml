@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.2.RELEASE</version>
+        <version>2.3.5.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -19,7 +19,6 @@
     <!--子模块-->
     <modules>
         <module>microservice-providers</module>
-
         <module>microservice-api</module>
         <module>microservice-consumer</module>
         <module>microservice-servers</module>
@@ -28,62 +27,125 @@
     </modules>
 
     <properties>
+        
+        <!--nacos参数-->
         <nacos.host>http://www.seefly.top:8848</nacos.host>
         <nacos.username>nacos</nacos.username>
         <nacos.password>shang2010</nacos.password>
+        
+        
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <junit.version>4.12</junit.version>
-        <log4j.version>1.2.17</log4j.version>
+        
+    
+        <!--========微服务版本控制============-->
+        <!--spring boot 版本-->
+        <spring.boot.version>2.3.5.RELEASE</spring.boot.version>
+        <!--spring cloud版本-->
+        <spring.cloud.version>Hoxton.SR9</spring.cloud.version>
+        <!--spring cloud alibaba版本-->
+        <spring.cloud.alibaba.version>2.2.1.RELEASE</spring.cloud.alibaba.version>
+        <!--seata版本-->
+        <seata.version>1.4.1</seata.version>
+        <!--nacos客户端版本-->
+        <nacos.client.version>1.3.2</nacos.client.version>
+        
+        
+        
+        <!--========基础组件版本控制=======================-->
+        <!--数据库驱动-->
+        <mysql.drvier.version>8.0.21</mysql.drvier.version>
+        <!--德鲁伊数据源-->
+        <druid.version>1.0.31</druid.version>
+        <!--mybatis-->
+        <mybatis.starter.version>2.1.2</mybatis.starter.version>
+        <!--lombok-->
         <lombok.version>1.16.18</lombok.version>
-        <mysql.drvier.version>5.1.46</mysql.drvier.version>
-
-
-
-        <ali.cloud.version>2.2.1.RELEASE</ali.cloud.version>
-        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+        <!--日志-->
+        <log4j.version>1.2.17</log4j.version>
+        <logback.version>1.2.3</logback.version>
+        <!--单元测试-->
+        <junit.version>4.12</junit.version>
+        
     </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
-            <!--springCloud版本号-->
+            <!--spring cloud-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Hoxton.SR3</version>
+                <version>${spring.cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!--spring cloud alibaba-->
             <!--全家桶 https://github.com/alibaba/spring-cloud-alibaba -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${ali.cloud.version}</version>
+                <version>${spring.cloud.alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+                <exclusions>
+                    <!--版本太低,不要-->
+                    <exclusion>
+                        <groupId>com.alibaba.nacos</groupId>
+                        <artifactId>nacos-client</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
-
-
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>1.3.2</version>
+            </dependency>
+    
+    
+            <dependency>
+                <groupId>org.seefly</groupId>
+                <artifactId>microservice-api</artifactId>
+                <version>${project.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.seefly</groupId>
+                <artifactId>provider-api-dept</artifactId>
+                <version>${project.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            
+            
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.drvier.version}</version>
             </dependency>
+            
             <dependency>
                 <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
-                <version>1.0.31</version>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.23</version>
             </dependency>
+           
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>1.3.0</version>
+                <version>${mybatis.starter.version}</version>
             </dependency>
+            
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
-                <version>1.2.3</version>
+                <version>${logback.version}</version>
             </dependency>
             <dependency>
                 <groupId>log4j</groupId>
@@ -99,13 +161,15 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.2</version>
+                <version>${lombok.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
+    
+    
+    
     <build>
-
         <resources>
             <resource>
                 <directory>src/main/resources</directory>

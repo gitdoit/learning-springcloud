@@ -1,17 +1,18 @@
 server:
-  port: ${port}
+  port: 8008
 spring:
   application:
-    name: microservicecloud-dept
+    name: microservicecloud-seata
+
 
 eureka:
   client:
     service-url:
-      defaultZone: http://121.36.142.5:7001/eureka # eurekaServer地址，单机版
+      defaultZone: http://121.36.142.5:7001/eureka
   instance:
-    instance-id: ${providerid} #实例ID
-    prefer-ip-address: true #访问路径可以显示IP地址
-    ip-address: ${exportip}
+    instance-id: micro-provider-seata
+    prefer-ip-address: true
+    ip-address: 192.168.10.62
 
 seata:
   enabled: true
@@ -83,8 +84,10 @@ seata:
   log:
     exception-rate: 100
 
+
+
 info:
   app.name: seefly-microservicecloud
-  company.name: www.seefly.top
-  build.artifactId: @project.artifactId@ #maven对这resources文件夹进行扫描，替换 $...$之间的变量
-  build.version: @project.version@ #需要配置resource插件
+  company.name: www.seefly.top #???
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@
