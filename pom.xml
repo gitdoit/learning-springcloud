@@ -55,7 +55,7 @@
         
         <!--========基础组件版本控制=======================-->
         <!--数据库驱动-->
-        <mysql.drvier.version>8.0.21</mysql.drvier.version>
+        <mysql.drvier.version>8.0.28</mysql.drvier.version>
         <!--德鲁伊数据源-->
         <druid.version>1.0.31</druid.version>
         <!--mybatis-->
